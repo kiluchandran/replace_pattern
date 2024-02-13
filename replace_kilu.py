@@ -7,11 +7,16 @@ parser.add_argument("-r", "--replace")
 args = parser.parse_args()
 
 
+def search_replace(file_name, search_word, replace_word):
+    pass
+
+
 def main():
     file_name = args.input_file
     if args.find and args.replace:
         search_word = args.find
         replace_word = args.replace
+        search_replace(file_name, search_word, replace_word)
 
 
 main()
