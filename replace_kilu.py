@@ -8,7 +8,8 @@ args = parser.parse_args()
 
 
 def search_replace(file_name, search_word, replace_word):
-    pass
+    with open(file_name, "r") as file:
+        file_contents = file.read()
 
 
 def main():
