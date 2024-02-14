@@ -9,9 +9,11 @@ args = parser.parse_args()
 
 def search_replace(file_name, search_word, replace_word):
     with open(file_name, "r") as file:
-        file_contents = file.read()
-        updated_contents = file_contents.replace(search_word, replace_word)
-        print(updated_contents)
+        file_contents = file.readlines()
+        file_contents = [line.strip() for line in file_contents]
+        for line in file_contents:
+            updated_line = line.replace(search_word, replace_word)
+            print(updated_line)
 
 
 def main():
